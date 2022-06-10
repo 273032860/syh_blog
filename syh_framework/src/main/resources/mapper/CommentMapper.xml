@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.syh.mapper.CommentMapper">
+
+    <resultMap id="BaseResultMap" type="com.syh.domain.entity.Comment">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="type" column="type" jdbcType="CHAR"/>
+            <result property="articleId" column="article_id" jdbcType="BIGINT"/>
+            <result property="rootId" column="root_id" jdbcType="BIGINT"/>
+            <result property="content" column="content" jdbcType="VARCHAR"/>
+            <result property="toComUserId" column="to_com_user_id" jdbcType="BIGINT"/>
+            <result property="toComId" column="to_com_id" jdbcType="BIGINT"/>
+            <result property="createBy" column="create_by" jdbcType="BIGINT"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateBy" column="update_by" jdbcType="BIGINT"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+            <result property="delFlag" column="del_flag" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,type,article_id,
+        root_id,content,to_com_user_id,
+        to_com_id,create_by,create_time,
+        update_by,update_time,del_flag
+    </sql>
+</mapper>

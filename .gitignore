@@ -1,0 +1,4 @@
+# 项目排除路径
+/Syh-Blog/target/
+/syh_admin/target/
+/syh_framework/target/
